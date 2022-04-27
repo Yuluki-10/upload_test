@@ -3,9 +3,7 @@
 <p>
   <strong>Description:</strong>
   <%= @item.description %>
-  <% if @item.image.attached? %>
-    <td><%= image_tag @item.image %></td>
-  <% end %>
+  <%= image_tag @item.display_image if @item.image.attached? %>
 </p>
 
 <%= link_to 'Edit', edit_item_path(@item) %> |
